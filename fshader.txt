@@ -1,0 +1,20 @@
+vec4 eye_pos;
+varying vec4 vertex;
+varying vec3 normal;
+float dotl;
+vec4 color;
+
+vec4 diff;
+
+void main()
+{
+	eye_pos = vec4(20.0,20.0,20.0,20.0);
+	diff = (eye_pos - vertex);
+	
+	//dotl = dot(eye_pos,normalize(normal));
+
+	color = vec4(normal.x,normal.y,normal.z,0.0);
+	
+	
+	gl_FragColor = color;
+}
